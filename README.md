@@ -21,8 +21,12 @@ aphid_prep.py: Script for creating necessary files to run APHID. Allows for cust
 _Dependencies_
 
 &mdash; Biopython
-Numpy
-Pandas
-Primer3-py
-Regex
+&mdash; Numpy
+&mdash; Pandas
+&mdash; Primer3-py
+&mdash; Regex
+&mdash; Python-docx
+
+**USING APHID**
+
 
