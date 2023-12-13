@@ -561,8 +561,9 @@ except:
 #Finally we need two primers for the gRNA.
 #In this protocol, we anneal two primers and insert them into the plasmid via ligation.
 #Using the pHEE-mCherry vector, this means we are inserting into the BsaI cut site. Therefore each primer needs specific sticky ends.
-gRNA_F_primer_seq = 'ATTG' + best_guide.sequence
-gRNA_R_primer_seq = 'AAAC' + str(Seq(best_guide.sequence).reverse_complement())
+#For improved efficiency, instead of using 20bp gRNA + scaffold, we use G + 19bp gRNA + scaffold
+gRNA_F_primer_seq = 'ATTG' + best_guide.sequence[1:]
+gRNA_R_primer_seq = 'AAAC' + str(Seq(best_guide.sequence[1:]).reverse_complement())
 
 print('Primer design complete.')
 print('')
@@ -736,17 +737,4 @@ with open(project_name + '_plasmid.fa', 'w') as f:
 	f.write('>pHEE_mCherry_' + project_name + '\n')
 	f.write(whole_plasmid_seq)
 
-print('Design copmlete.')
-
-
-#FIX IF NO PRIMERS FOUND
-
-#OUTPUT CLONING PROTOCOL - This can be generic and just included along, it does not need to include project-specific information.
-
-#TEST EVERYTHING
-
-
-
-
-
-
+print('Design complete.')
