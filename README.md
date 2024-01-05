@@ -7,7 +7,7 @@ The main purpose of APHID is to eliminate the tedious work of downloading geneti
 ***
 ### **GETTING STARTED**
 
-First: If you are not comfortable with using Python scripts, the tool is available for in-browser use on Google Colab: [APHID Online](https://colab.research.google.com/drive/1saVRmRe955d7yb_DxlcMMhWcH9K_QeNS?usp=sharing).
+First: If you are not comfortable with using Python scripts, the tool is available for in-browser use on Google Colab: [APHID Online](https://colab.research.google.com/github/mikemudgett/APHID/blob/main/APHID_online.ipynb).
 Follow the steps block-by-block to prepare the required files and run the tool.
 
 If you would like to run APHID locally, download the three scripts APHID.py, aphid_utils.py, and aphid_prep.py.
