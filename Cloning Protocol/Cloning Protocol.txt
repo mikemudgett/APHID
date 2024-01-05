@@ -1,1 +1,57 @@
-I will put a document in here soon
+HDR Plasmid Cloning Protocol
+Updated 01/05/2024
+
+Part 1 – gRNA insertion
+1.	Make 1:1 mix of diluted (20uM) XXX-gRNA-F and XXX-gRNA-R primers. Anneal the XXX-gRNA-F and XXX-gRNA-R mix with a gradually decreasing cycle in the PCR machine from 94C to 4C.
+2.	Insert the primers into the plasmid pHEE-GT (cut with BsaI) using T4 ligase. Use the following table for creating the mix (volumes in microliters).
+H2O	14.5
+10X T4 Ligase Buffer	2
+Annealed gRNA Primer Mix	0.5
+BsaI cut plasmid	2
+T4 Ligase	1
+Total	20
+Mix and leave the reaction tube floating on ice which will melt overnight.
+
+3.	In the morning, deactivate the reaction for 10 minutes at 65C.
+4.	Transform the plasmid into E.coli (I typically transform 1ul of ligation mix into our competent cells). Inoculate two colonies and perform mini-prep. Do not do colony PCR. Sequence one of the plasmids using U6-26-IDF to confirm single gRNA insertion. You now have a “gRNA plasmid”.
+5.	Cut the gRNA plasmid with HindIII. (Amount of plasmid may vary based on your concentration):
+H2O	38
+10X NEB Buffer 2.1	5
+gRNA Plasmid	5
+HindIII	2
+Total	50
+	Leave overnight at 37C.
+6.	The next morning, deactivate HindIII digest for 20 minutes at 80C. Continue to Step 9 when ready.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Part 2: Donor creation and insertion
+7.	Amplify the fragments of your donor element. I recommend using 2X Q5 Master Mix. Shown is an example for a GFP donor element for gene XXX:
+a.	L: XXX-L-F + XXX-L-R + Col DNA
+b.	C: GFP-F + GFP-R + A plasmid containing GFP
+c.	R: XXX-R-F + XXX-R-R + Col DNA
+H2O	10.1
+Primer 1	0.7
+Primer 2	0.7
+Template DNA	1
+2X Q5 MM	12.5
+Total	25
+98C  |  98C  65C  72C  |  72C
+2:00  |  :10  :20  :30* |  2:00
+35 Cycles
+*(Extension time varies based on fragment length)
+8.	Run gels on the PCRs and cut bands. Do subsequent overlapping PCRs to get one large fragment. If you cannot get one large fragment, you may be able to do the Gibson Assembly with just two fragments, or even three.
+9.	Insert the donor piece into the HindIII cut gRNA plasmid. Use the 2X Gibson Assembly Master Mix. Only 1ul of Master Mix is needed if you are inserting a single fragment. More is required as the number of fragments increases.
+10.	Transform the plasmid into E.coli. Select a sufficient number of colonies and perform colony PCR. Check the left side: pHEE-HindIII-seq1 + GFP-R and the right side: pHEE-d-HindIII-seq2 + GFP-F. Inoculate positive colonies and perform mini-prep. Sequence one of the plasmids using pHEE-HindIII-seq1 and pHEE-d-HindIII-seq2 to confirm the donor element sequence. You now have the complete gene targeting plasmid.
+
+
